@@ -1,0 +1,233 @@
+/* Contact Page Main Layout */
+.layer6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 50px 20px;
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Contact Section */
+  .contact_us {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1100px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    box-sizing: border-box;
+  }
+  
+  /* Contact Info Box */
+  .info_container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  /* Individual Contact Info */
+  .info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+  }
+  
+  .info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+  }
+  
+  .info i {
+    font-size: 22px;
+    color: #f39c12;
+  }
+  
+  .info a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .info a:hover {
+    color: #f1c40f;
+  }
+  
+  /* Form Styling */
+  form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    min-width: 280px;
+  }
+  
+  form h1 {
+    text-align: center;
+    color: #f8f8f8;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* Input Fields */
+  .inp_field {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 12px;
+    transition: 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .inp_field:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
+  
+  .inp_field i {
+    color: #f39c12;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+  
+  .inp_field input, .message {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 6px;
+    outline: none;
+  }
+  
+  .message {
+    resize: none;
+    min-height: 100px;
+    height: auto;
+
+  }
+  
+  /* Submit Button */
+  .submit {
+    background: #f39c12;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    margin-top: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+  }
+  
+  .submit:hover {
+    background: #e67e22;
+  }
+  
+  /* Global fixes for better responsiveness */
+  * {
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .contact_us {
+      padding: 30px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .layer6 {
+      padding: 30px 15px;
+      height: auto;
+    }
+    
+    .contact_us {
+      flex-direction: column;
+      padding: 25px;
+      gap: 25px;
+    }
+    
+    .info_container, form {
+      width: 100%;
+    }
+    
+    form {
+      padding: 25px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .layer6 {
+      padding: 20px 10px;
+    }
+    
+    .contact_us {
+      padding: 20px;
+      gap: 20px;
+      border-radius: 15px;
+    }
+    
+    form, .info_container {
+      padding: 15px;
+    }
+    
+    .info {
+      padding: 12px 15px;
+    }
+    
+    .inp_field {
+      padding: 10px;
+    }
+    
+    form h1 {
+      font-size: 20px;
+    }
+    
+    .info i {
+      font-size: 18px;
+    }
+    
+    .info a, .inp_field input, .message {
+      font-size: 14px;
+    }
+    
+    .submit {
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  }

@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="keywords" content="Document" />
+        <meta name="description" content="Your Description..." />
+        <title>Sas Portfolio</title>
+        <link
+            rel="stylesheet"
+            href="/resources/swiper-js/swiper-bundle.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+        <link rel="stylesheet" href="/resources/css/loader.css" />
+        <link rel="stylesheet" href="/resources/css/hamburger.css" />
+        <link rel="stylesheet" href="/resources/css/home.css" />
+        <link rel="stylesheet" href="/resources/css/about.css" />
+        <link rel="stylesheet" href="/resources/css/services.css" />
+        <link rel="stylesheet" href="/resources/css/portfolio.css" />
+        <link rel="stylesheet" href="/resources/css/comments.css" />
+        <link rel="stylesheet" href="/resources/css/contact.css" />
+        <link href="/resources/mapbox-gl/mapbox-gl.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/resources/css/style.css" />
+        <link
+            rel="shortcut icon"
+            href="/resources/img/favicon.ico"
+            type="image/x-icon" />
+    </head>
+    <body onload="loaded()">
+        <div class="loader">
+            <div class="c c1"></div>
+            <div class="c c2"></div>
+            <div class="c c3"></div>
+            <div class="c c4"></div>
+            <div class="c c5"></div>
+            <div class="c c6"></div>
+        </div>
+        <script>
+            let loader = document.querySelector(".loader");
+            function loaded() {
+                loader.classList.add("remove");
+                setTimeout(() => {
+                    loader.style.display = "none";
+                }, 1000);
+            }
+        </script>
+        <!-- HAMBURGER MENU BUTTON (responsively visible) -->
+        <div class="hamburger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <!-- THE REAL NAVIGATION -->
+        <nav class="navigation">
+            <h1>
+                Sas👩🏻‍💻
+                <div></div>
+                <div></div>
+            </h1>
+
+
+            
+            <ul>
+                <li><a href="#" onclick="home()">home</a></li>
+                <li>
+                    <a
+                        href="#"
+                        onclick="about(); animate3.play(); animate4.play();"
+                        >about me</a
+                    >
+                </li>
+                <li><a href="#" onclick="portfolio()">projects</a></li>
+                <li>
+                    <a href="#" onclick="services(); animate6.play();"
+                        >blogs</a
+                    >
+                </li>
+                <li><a href="#" onclick="comments()">Achievements</a></li>
+                <li>
+                    <a href="#" onclick="contact(); animate5.play()">contact</a>
+                </li>
+            </ul>
+                <p>
+                    &copy; 2025
+                    <a
+                        href="https://github.com/Sasmita-sahoo-2004"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Sasmita</a
+                    >😁
+                </p>
+        </nav>
+
+       
+        <div class="container">
+            <div class="layer layer1 active">
+                <div class="home main">
+                    <div class="canvas_container">
+                        <canvas></canvas>
+                    </div>
+                    <div class="content-for-home">
+                        <div class="img-container"></div>
+                        <h1 align="center">Hi👋, I'm Sasmita Sahoo !</h1>
+                        <h2 align="center"> I am an AI & ML Engineer, 
+                            Passionate about Research, IoT & Robotics</h2>
+                            <div class="buttones">
+                                <a class="download" href="resources\SASMITA_Cv (1).pdf" download="Sasmita_Sahoo_Resume">
+                                    <i class="fas fa-file-download"></i> Download Resume
+                                </a>
+                                <a class="hire" onclick="toggleChatbot()">
+                                    <i class="fas fa-robot"></i> My Bot
+                                </a>
+                                <!-- Chatbot Floating Icon -->
+<div class="chatbot-icon" onclick="toggleChatbot()">💬</div>
+
+<!-- Chatbot Container -->
+<div class="chatbot-container" id="chatbot">
+    <div class="chat-header">
+        <span>🤖 Sasmita's AI Bot</span>
+        <button onclick="toggleChatbot()">✖</button>
+    </div>
+    <div class="chat-body" id="chat-body">
+        <div class="bot-message">Hey there 😊! Ask me anything.</div>
+    </div>
+    <div class="chat-input">
+        <input type="text" id="chat-input" placeholder="Type a message..." onkeypress="handleKeyPress(event)">
+        <button id="send-btn">➤</button>
+    </div>
+</div>
+</div>
+                           
+                        <div class="social-icons">
+                            <div class="s-icon">
+                                <a href="https://www.linkedin.com/in/sasmita--sahoo/">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <div class="s-name">Linkedin</div>
+                            </div>
+                            <div class="s-icon">
+                                <a href="https://scholar.google.com/citations?user=tcsuiCMAAAAJ&hl=en">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </a>
+                                <div class="s-name">Google Scholar</div>
+                            </div>
+
+                            <div class="s-icon">
+                                <a href="mailto:sasmita2004mama@gmail.com">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                                <div class="s-name">Email</div>
+                            </div>
+                            
+                            <div class="s-icon">
+                                <a href="https://github.com/Sasmita-sahoo-2004">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <div class="s-name">GitHub</div>
+                            </div>
+                            <div class="s-icon">
+                                <a href="https://www.cloudskillsboost.google/public_profiles/c52afaa6-08bc-42df-b26c-2b63a3baef97" target="_blank">
+                                    <i class="fas fa-laptop-code"></i>
+                                </a>
+                                <div class="s-name">Google Arcade</div>
+                            </div>
+                            
+                            
+                           
+                            
+                        </div>
+
+                        <div class="side-nav">
+                            <button
+                                onclick="home(); animate3.play(); animate4.play();">
+                                <span class="w">W</span>
+                                <span class="tooltip"> who am I? </span>
+                            </button>
+                            <button onclick="about(); animate6.play();">
+                                <span class="w">W</span>
+                                <span class="tooltip"> what do I do? </span>
+                            </button>
+                            <button onclick="portfolio()">
+                                <span class="w">W</span>
+                                <span class="tooltip">
+                                    what I have done?
+                                </span>
+                            </button>
+                            <button onclick="comments()">
+                                <span class="w">W</span>
+                                <span class="tooltip"> what I have achieved? </span>
+                            </button>
+                            <button onclick="contact(); animate5.play()">
+                                <span class="w">W</span>
+                                <span class="tooltip"> where am I? </span>
+                            </button>
+                        </div>
+                        <div class="titles-for-side-nav">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer2">
+                <div class="about main">
+                    <!-- SEGMENT FOR STYLING. -->
+                    <div class="styling">
+                        <div class="absolute box"></div>
+                        <div class="absolute circle"></div>
+                        <div class="absolute triangle"></div>
+                        <div class="absolute dots">
+                            <div class="dot dot1"></div>
+                            <div class="dot dot2"></div>
+                            <div class="dot dot3"></div>
+                            <div class="dot dot4"></div>
+                            <div class="dot dot5"></div>
+                            <div class="dot dot6"></div>
+                            <div class="dot dot7"></div>
+                            <div class="dot dot8"></div>
+                            <div class="dot dot9"></div>
+                            <div class="dot dot10"></div>
+                            <div class="dot dot11"></div>
+                            <div class="dot dot12"></div>
+                            <div class="dot dot13"></div>
+                            <div class="dot dot14"></div>
+                            <div class="dot dot15"></div>
+                            <div class="dot dot16"></div>
+                            <div class="dot dot17"></div>
+                            <div class="dot dot18"></div>
+                            <div class="dot dot19"></div>
+                            <div class="dot dot20"></div>
+                            <div class="dot dot21"></div>
+                            <div class="dot dot22"></div>
+                            <div class="dot dot23"></div>
+                            <div class="dot dot24"></div>
+                        </div>
+
+                        <svg
+                            class="wave absolute"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 1450 320">
+                            <path
+                                fill-opacity="1"
+                                d="M0,320L48,277.3C96,235,192,149,288,122.7C384,96,480,128,576,165.3C672,203,768,245,864,234.7C960,224,1056,160,1152,112C1248,64,1344,32,1392,16L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                        </svg>
+
+                        <svg
+                            class="wave absolute opposite"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 1450 320">
+                            <path
+                                fill-opacity="1"
+                                d="M0,224L48,213.3C96,203,192,181,288,192C384,203,480,245,576,218.7C672,192,768,96,864,64C960,32,1056,64,1152,101.3C1248,139,1344,181,1392,202.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                        </svg>
+                    </div>
+
+                    <!-- REAL CONTENT -->
+                    <div class="wrapper">
+                        <div class="face face1">
+                            <div class="content">
+                                <p>Hello,</p>
+                                <h1>I'm Sasmita</h1>
+                                <p class="text">
+                                    currently pursuing final year B.Tech in Computer Science and Engineering with
+                                      specialization in Data Science and Machine Learning. My skills,
+                                      areas of interest and research include Machine Learning, Deep Learning, Computer Vision, IoT, Robotics, ui/ux design, Web Devlopment, app development.
+                                    I am passionate about data to solve complex problems and 
+                                    innovate across various industries. 
+                                </p>
+
+                                <!-- Skill Icons in One Row -->
+                                 <br>
+                                 <p class="text">
+                                    Some technologies i have worked with.....
+                                </p>
+<p >
+    <img src="https://skillicons.dev/icons?i=python,androidstudio,blender,java,sublime,javascript,html,css,wordpress,react,tailwind,firebase,pycharm,bootstrap,nodejs,mysql,mongodb,git,github,aws,gcp,tensorflow,pytorch,sklearn,opencv,ai,figma,latex,matlab,arduino" alt="Skills" />
+</p>
+
+                            </div>
+                        </div>
+                        <div class="face face2"></div>
+                    </div>
+
+                    <!-- THE NAVIGATION OF ABOUT -->
+                    <nav class="about_nav">
+                        <ul>
+                            <li>
+                                <a class="active" href="#" data-text="one"
+                                    >Skills</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#" data-text="two">Education</a>
+                            </li>
+                            
+                        </ul>
+                    </nav>
+
+                    <div class="about_container">
+                        <!-- SKILL BOX -->
+                         
+                        <div class="skills">
+                            <div class="skill">
+                                <div class="name">Python</div>
+                                <div class="value" style="left: 70%">70%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">Machine Learning</div>
+                                <div class="value" style="left: 90%">90%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">Deep Learning</div>
+                                <div class="value" style="left: 60%">60%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 60%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">HTML & CSS </div>
+                                <div class="value" style="left: 70%">70%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">SQL</div>
+                                <div class="value" style="left: 90%">90%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">Git & Github</div>
+                                <div class="value" style="left: 60%">60%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 60%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">Android app development</div>
+                                <div class="value" style="left: 50%">50%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 50%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="name">Power BI</div>
+                                <div class="value" style="left: 95%">95%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">AWS & GCP</div>
+                                <div class="value" style="left: 65%">65%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 65%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">Figma & Canvas</div>
+                                <div class="value" style="left: 50%">50%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 50%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">Cutting edge AI Modelling</div>
+                                <div class="value" style="left: 65%">65%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 45%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">IOT & Robotics</div>
+                                <div class="value" style="left: 45%">45%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 55%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- EXPERIENCE -->
+
+                        <div class="education">
+                            <div class="middle_line"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-book-reader"></i>
+                                <i class="date">2021 - 2025</i>
+                                <h2>BTech Computer Science & Engineering</h2>
+                                <i class="name_company">Centurion University Of Technology & Management</i>
+                                <article class="text_hidden">
+                                    Currently I am pursuing my Btech in computer science and engineering with specialisation of 
+                                    data science and machine learning. I have gained different technical skills and 
+                                    and published 8 research papers while scoring 9.66 cgpa.
+                                </article>
+                            </div>
+                            <div class="whitespace"></div>
+                            <div class="whitespace"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-book-reader"></i>
+                                <i class="date">2019 - 2021</i>
+                                <h2>Intermediate education</h2>
+                                <i class="name_company">Ramadevi Women's Higher Secondary School</i>
+                                <article class="text_hidden">
+                                    I completed my Intermediate of Class 11 & 12 with 85%, specializing in Science. This phase deepened 
+                                    my interest in Mathematics, Physics and bio, 
+                                    and I actively engaged in projects.
+                                </article>
+                            </div>
+                            <div class="cover">
+                                <i class="job_box fas fa-book-open"></i>
+                                <i class="date">2016 - 2019</i>
+                                <h2>Higher School Education</h2>
+                                <i class="name_company">Debaraj Bidyapitha</i>
+                                <article class="text_hidden">
+                                    I pursued my education from Class 8 to 10, 
+                                    securing 87%. These years strengthened my presentation , innovation , elocation skills
+                                    and problem-solving abilities, along with active participation in 
+                                    science exhibitions and quizzes.
+                                </article>
+                            </div>
+                            <div class="whitespace"></div>
+                            <div class="whitespace"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-book-open"></i>
+                                <i class="date">2008 - 2016</i>
+                                <h2>Primary Education</h2>
+                                <i class="name_company">Debaraj U.P Nodal School</i>
+                                <article class="text_hidden">
+                                    I completed my schooling from Class 1 to 7, achieving 90%. During this time,
+                                     I built a strong academic foundation 
+                                    and developed skills in debate, painting, and other activities.
+                                    My interest in both academics and extracurriculars helped shape my learning journey.
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer3">
+                <div class="services main">
+                    <div class="section-title">
+                        <br>
+                        <h1> 👉 See Some Of My Blogs 👈 </h1>
+                        </div>
+                    <div class="blog-container">
+                        <div class="blog-card">
+                           <img src="resources/blogs/blog1.jpg" alt="Blog 1" class="blog-image">
+                            <div class="blog-content">
+                                <h2 class="blog-title">Life after Death</h2>
+                    <a href="https://mansajyoti.blogspot.com/2023/02/garuda-purana-life-after-death.html" class="read-more" data-blog="blog1">Read More</a>
+                            </div>
+                            </div>
+                        <div class="blog-card">
+                            <img src="resources/blogs/blog2.jpg" alt="Blog 1" class="blog-image">
+                                <div class="blog-content">
+                                    <h2 class="blog-title">6 Enemies of life</h2>
+                                      
+                        <a href="https://mansajyoti.blogspot.com/2023/02/the-six-enemies-of-life-what-means-of.html" 
+                        class="read-more" data-blog="blog1">Read More</a>
+                                </div>
+                                </div>
+                        <div class="blog-card">
+                            <img src="resources/blogs/blog3.png" alt="Blog 1" class="blog-image">
+                             <div class="blog-content">
+                                        <h2 class="blog-title">Are you showing off ??</h2>
+                                         
+                            <a href="https://mansajyoti.blogspot.com/2023/03/are-you-also-showing-off-in-front-of.html" 
+                            class="read-more" data-blog="blog1">Read More</a>
+                                    </div>
+                                    </div>
+                         <div class="blog-card">
+                                        <img src="resources/blogs/blog4.webp" alt="Blog 1" class="blog-image">
+                                        <div class="blog-content">
+                                            <h2 class="blog-title">Don't Focus on goal</h2>
+                                              
+                                <a href="https://mansajyoti.blogspot.com/2023/03/dont-focus-on-goal-focus-on-system.html" 
+                                class="read-more" data-blog="blog1">Read More</a>
+                                        </div>
+                         </div>
+                         
+                         <div class="blog-card">
+                                            <img src="resources/img/blog1.jpg" alt="Blog 1" class="blog-image">
+                                            <div class="blog-content">
+                                                <h2 class="blog-title">Attract everything by one way</h2>
+                                                  
+                                    <a href="https://mansajyoti.blogspot.com/2023/09/know-to-attract-everything-you-want-by.html#" class="read-more" data-blog="blog1">Read More</a>
+                                            </div>
+                                            </div>
+                         <div class="blog-card">
+                            <img src="resources/blogs/blog5.avif" alt="Blog 1" class="blog-image">
+                                    <div class="blog-content">
+                                    <h2 class="blog-title">To a person, you are whole world</h2>
+                                                    
+                                 <a href="https://mansajyoti.blogspot.com/2023/03/friends-to-one-person-you-may-be-world.html"
+                                  class="read-more" data-blog="blog1">Read More</a>
+                                </div>
+                            </div>
+                            
+                            <div class="blog-card">
+                                <img src="resources/blogs/blog6.webp" alt="Blog 1" class="blog-image">
+                                <div class="blog-content">
+                                <h2 class="blog-title">Lessons from Lord krishna's life</h2>
+                                                          
+                               <a href="https://mansajyoti.blogspot.com/2023/05/lessons-from-lord-krishnas-life.html"
+                                class="read-more" data-blog="blog1">Read More</a>
+                            </div>
+                        </div>
+                                                    
+                    <div class="blog-card">
+                            <img src="resources/blogs/blog7.jpg" alt="Blog 1" class="blog-image">
+                            <div class="blog-content">
+                            <h2 class="blog-title">Sonar rock vs mine (ml methods)</h2>
+                                                              
+                            <a href="https://ieeexplore.ieee.org/abstract/document/10530801" class="read-more" data-blog="blog1">Read More</a>
+                            </div>
+                            </div>
+                            <div class="blog-card">
+                            <img src="resources/blogs/blog8.webp" alt="Blog 1" class="blog-image">
+                            <div class="blog-content">
+                            <h2 class="blog-title">chest x-ray classificatiion (Dl)</h2>
+                                                                  
+                            <a href="https://ieeexplore.ieee.org/abstract/document/10530746" class="read-more" data-blog="blog1">Read More</a>
+                    </div>
+                 </div>
+                <div class="blog-card">
+               <img src="resources/blogs/blog9.webp" alt="Blog 1" class="blog-image">
+               <div class="blog-content">
+               <h2 class="blog-title">Digital Library security (vpc)</h2>
+                                                                    
+            <a href="https://ieeexplore.ieee.org/abstract/document/10696648" class="read-more" data-blog="blog1">Read More</a>
+            </div>
+            </div>
+            <div class="blog-card">
+            <img src="resources/blogs/blog10.jpg" alt="Blog 1" class="blog-image">
+                <div class="blog-content">
+               <h2 class="blog-title">Smart Greenhouse (IOT, GSM)</h2>
+                                                                          
+             <a href="https://ieeexplore.ieee.org/abstract/document/10456513" class="read-more" data-blog="blog1">Read More</a>
+                </div>
+               </div>
+                <div class="blog-card">
+                <img src="resources/blogs/blog11.jpg" alt="Blog 1" class="blog-image">
+                <div class="blog-content">
+              <h2 class="blog-title">Digital twin (smart building)</h2>
+                                                                            
+             <a href="https://ieeexplore.ieee.org/abstract/document/10692050" class="read-more" data-blog="blog1">Read More</a>
+                </div>
+                </div>
+                <div class="blog-card">
+                <img src="resources/blogs/blog12.webp" alt="Blog 1" class="blog-image">
+                <div class="blog-content">
+               <h2 class="blog-title">Robovac (bluetooth controlled)</h2>
+                                                                                  
+                <a href="https://mansajyoti.blogspot.com/2024/04/robotics-project-floor-cleaner.html" class="read-more" data-blog="blog1">Read More</a>
+                </div>
+               </div>
+
+                <div class="blog-card">
+             <img src="resources/blogs/blog13.jpg" alt="Blog 1" class="blog-image">
+             <div class="blog-content">
+              <h2 class="blog-title">Not able to take decision?</h2>
+                                                                                    
+             <a href="https://manshttps://mansajyoti.blogspot.com/2024/01/what-to-do-when-you-are-not-able-to.html" class="read-more" data-blog="blog1">Read More</a>
+                 </div>
+                </div>
+                <div class="blog-card">
+                <img src="resources/blogs/blog14.jpg" alt="Blog 1" class="blog-image">
+                <div class="blog-content">
+              <h2 class="blog-title">path to success..</h2>
+                                                                                          
+                <a href="https://mansajyoti.blogspot.com/2023/09/the-secret-path-to-achieving-anything.html" class="read-more" data-blog="blog1">Read More</a>
+                    </div>
+                    </div>
+
+                  <div class="blog-card">
+                 <img src="resources/blogs/blog15.jpg" alt="Blog 1" class="blog-image">
+                            <div class="blog-content">
+                      <h2 class="blog-title">what matters in life ???</h2>
+                                                                                            
+                  <a href="https://mansajyoti.blogspot.com/2023/07/what-truly-matters-in-life-lets-explore.html" class="read-more" data-blog="blog1">Read More</a>
+                    </div>
+                    </div>
+                    <div class="blog-card">
+                    <img src="resources/blogs/blog16.avif" alt="Blog 1" class="blog-image">
+                    <div class="blog-content">
+                   <h2 class="blog-title">no perfect goal</h2>
+                                                                                                  
+                 <a href="https://mansajyoti.blogspot.com/2023/07/are-you-also-trying-to-get-that-one.html" class="read-more" data-blog="blog1">Read More</a>
+                 </div>
+               </div>
+
+                <div class="blog-card">
+               <img src="resources/blogs/blog17.jpg" alt="Blog 1" class="blog-image">
+             <div class="blog-content">
+             <h2 class="blog-title">When everything feels unhappy</h2>
+                                                                                                    
+            <a href="https://mansajyoti.blogspot.com/2023/04/if-you-are-also-feeling-unhappy-for.html" class="read-more" data-blog="blog1">Read More</a>
+                </div>
+                </div>
+                <div class="blog-card">
+                <img src="resources/blogs/blog18.jpg" alt="Blog 1" class="blog-image">
+                <div class="blog-content">
+             <h2 class="blog-title">Solutions to life's problem</h2>
+                                                                                                          
+            <a href="https://mansajyoti.blogspot.com/2023/01/all-problems-one-solution-life-is.html" class="read-more" data-blog="blog1">Read More</a>
+            </div>
+        </div>
+                    <div class="blog-card">
+                         <img src="resources/blogs/blog19.avif" alt="Blog 1" class="blog-image">
+                 <div class="blog-content">
+              <h2 class="blog-title">When you become too available</h2>
+                                                                                                              
+             <a href="https://mansajyoti.blogspot.com/2023/07/dont-be-too-available-for-anyone-time.html" class="read-more" data-blog="blog1">Read More</a>
+                             </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="blog-modal">
+                    <div class="blog-modal-content">
+                        <span class="close-btn">&times;</span>
+                        <h2 class="modal-title"></h2>
+                        <p class="modal-body"></p>
+                    </div>
+                </div>
+                  
+            </div>
+            <div class="layer layer4">
+                <div class="portfolio main">
+                    <div class="tip main">
+                        <div class="allContent">
+                            <div class="description" style="display: none">
+                                <div class="pro_intro">
+                                    <div class="nameplate">
+                                        <h1>Wedding Couple</h1>
+                                        <span
+                                            >Category:
+                                            <span style="color: #999"
+                                                >Web Design</span
+                                            ></span
+                                        >
+                                    </div>
+                                    <div class="other_text">
+                                        <h2>Project Brief:</h2>
+                                        <p
+                                            class="pro_brief"
+                                            style="
+                                                color: #999;
+                                                padding-left: 15px;
+                                            ">
+                                            Lorem ipsum, dolor sit amet
+                                            consectetur adipisicing elit. At
+                                            corrupti modi perferendis iure
+                                            corporis dolores minus asperiores
+                                            nemo debitis veritatis id placeat,
+                                            similique eum recusandae ipsa quia
+                                            cum earum nam?
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="pro_info">
+                                    <h2>Project Info</h2>
+                                    <p class="Date">
+                                        <b>Date: </b>
+                                        <span style="color: #999">2020</span>
+                                    </p>
+                                    <p class="client">
+                                        <b>Features: </b>
+                                        <span style="color: #999">xyz</span>
+                                    </p>
+                                    
+                                    <p class="link">
+                                        <b>Web: </b>
+                                        <span style="color: #999"
+                                            ><a href="#"
+                                                >www.domain.com</a
+                                            ></span
+                                        >
+                                    </p>
+                                </div>
+                            </div>
+
+                            <button class="closeButton">
+                                <span>Project Details</span>
+                                <div class="icon"></div>
+                            </button>
+                            <button class="exitButton">&times;</button>
+
+                            <div class="port_content">
+                                <div class="swiper-container-2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                    <!-- Add Pagination -->
+                                    <div class="swiper-scrollbar"></div>
+                                    <!-- Add Arrows -->
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="about_nav padding_top">
+                        <ul>
+                            <li>
+                                <a
+                                    class="filter active"
+                                    href="#"
+                                    data-filter="all"
+                                    >All</a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".web"
+                                    >Web Design</a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".logo"
+                                    >Machine Learning and DL</a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".card"
+                                    >Power BI</a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".app"
+                                    >Apps</a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".icon"
+                                    >Other</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="mymixcont">
+                        <div class="mix web">
+                            <img
+                                src="/resources/project/web1.avif"
+                                alt="" />
+                            <span class="title">Portfolio</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix icon">
+                            <img
+                                src="/resources/project/icon1.avif"
+                                alt="" />
+                            <span class="title">Robovac</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix card">
+                            <img
+                                src="/resources/project/card1.jpg"
+                                alt="" />
+                            <span class="title">Uk Rail Analytics</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix web">
+                            <img
+                                src="/resources/project/web2.jpg"
+                                alt="" />
+                            <span class="title">Online Tutorial</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix app">
+                            <img
+                                src="/resources/project/app1.png"
+                                alt="" />
+                            <span class="title">Recipe</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix card">
+                            <img
+                                src="/resources/project/card2.png"
+                                alt="" />
+                            <span class="title">Sales Dashboard</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix web">
+                            <img
+                                src="/resources/project/web3.png"
+                                alt="" />
+                            <span class="title">Birthday animation</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix card">
+                            <img
+                                src="/resources/project/card3.webp"
+                                alt="" />
+                            <span class="title">HR Analysis</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix web">
+                            <img
+                                src="/resources/project/web4.png"
+                                alt="" />
+                            <span class="title">Maun Mitra</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix card">
+                            <img
+                                src="/resources/project/card4.webp"
+                                alt="" />
+                            <span class="title">Spotify Trend Analysis</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix logo">
+                            <img
+                                src="/resources/project/logo3.jpg"
+                                alt="" />
+                            <span class="title">Sonar Rock vs Mine Classification</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix icon">
+                            <img
+                                src="/resources/project/icon4.jpg"
+                                alt="" />
+                            <span class="title">Smart Greenhouse</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix app">
+                            <img
+                                src="/resources/img/portfolios/app/3.jpg"
+                                alt="" />
+                            <span class="title">Weather Station</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix logo">
+                            <img
+                                src="/resources/project/logo2.jpg"
+                                alt="" />
+                            <span class="title">EvapoTranspiration Modeling</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix logo">
+                            <img
+                                src="/resources/project/logo3.webp"
+                                alt="" />
+                            <span class="title">Sign Language Translator</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix card">
+                            <img
+                                src="/resources/project/card5.avif"
+                                alt="" />
+                            <span class="title">Job Salary Analysis</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix logo">
+                            <img
+                                src="/resources/project/logo4.gif"
+                                alt="" />
+                            <span class="title">Sentiment Analysis</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix logo">
+                            <img
+                                src="/resources/project/logo5.webp"
+                                alt="" />
+                            <span class="title">Chest X-ray Classification</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix logo">
+                            <img
+                                src="/resources/project/log5.jpg"
+                                alt="" />
+                            <span class="title">Facial Recognition</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix icon">
+                            <img
+                                src="/resources/project/icon5.jpg"
+                                alt="" />
+                            <span class="title">Interior Home</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix logo">
+                            <img
+                                src="/resources/project/logo6.webp"
+                                alt="" />
+                            <span class="title">Retail Price Prediction</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix icon">
+                            <img
+                                src="/resources/project/logo7.png"
+                                alt="" />
+                            <span class="title">Satellite and Spectral Analysis</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix app">
+                            <img
+                                src="/resources/project/app2.webp"
+                                alt="" />
+                            <span class="title">Ecommerce</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix icon">
+                            <img
+                                src="/resources/project/icon6.jpg"
+                                alt="" />
+                            <span class="title">Open Modelica</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer5">
+                <div class="testimonial">
+                    <h1>
+                        <span>🚀 My Progress with Some Achievements Along the Way</span>
+                    </h1>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="/resources/img/favicon.ico" alt="" />
+                                <h3>🌌 International Astronomy & Astrophysics Competition🌠</h3>
+                                
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Successfully participated and cleared rounds in the IAAC,
+                                    showcasing strong problem-solving skills in astrophysics and astronomy.
+                                </p>
+
+                                <a href="https://drive.google.com/file/d/1g8Sz2XpfRZzsyyB70YeZEIRff1qV8-qg/view?usp=sharing" class="view-btn" target="_blank">View Certificate</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/resources/img/favicon.ico" alt="" />
+                                <h3> 🧮 International Youth Math Challenge 📈 </h3>
+                                
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Competed among top global mathematics enthusiasts, and solved all the questions for clearning two topmost rounds.
+                                </p>
+
+                                <a href="https://drive.google.com/file/d/1-VMLchHl-RyDsQ8c2sB-nr7XWbeGau-K/view?usp=sharing" class="view-btn" target="_blank">View Certificate</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/resources/img/favicon.ico" alt="" />
+                                <h3> Best Technical Paper Award 📜✨ </h3>
+                                
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Received the Best Technical Paper Award by IEEE for outstanding research and project of MaunMitra APP.
+                                </p>
+
+                                <a href="https://drive.google.com/file/d/121mchL9AqTmBcCZ1Rxz07YKx0VHVlw-y/view?usp=sharing" class="view-btn" target="_blank">View Certificate</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/resources/img/favicon.ico" alt="" />
+                                <h3> Google Cloud Arcade Facilitator 2024 – Diamond League ☁️💎 </h3>
+                                
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Recognized as a Google Cloud Arcade Facilitator 2024 in the Diamond League, demonstrating expertise in cloud technologies, hands-on labs in Google Cloud solutions.
+                                </p>
+
+                                <a href="https://www.cloudskillsboost.google/public_profiles/c52afaa6-08bc-42df-b26c-2b63a3baef97" class="view-btn" target="_blank">View Certificate</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/resources/img/favicon.ico" alt="" />
+                                <h3> 🎤 Best Anchoring Award (3 Times) 🏆✨ </h3>
+                                
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Honored with the Best Anchoring Award three times at the school level and cultural festivals, showcasing exceptional public speaking, event hosting, and audience engagement skills. 🎭🎙️
+                                </p>
+
+                               
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/resources/img/favicon.ico" alt="" />
+                                <h3> 🏆 50+ First Prizes in State-Level Debate Competitions 🎙️✨ </h3>
+                                
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Achieved 50+ First Prizes in state-level debate competitions, demonstrating exceptional argumentation, critical thinking, and public speaking skills. 🔥🎤
+                                </p>
+
+                                <a href="/resources/Sasmita certificate.pdf" class="view-btn" target="_blank">View Certificate</a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="/resources/img/favicon.ico" alt="" />
+                                <h3>📚 Teaching & Mentoring Advanced Mathematics 🎓✨ </h3>
+                                
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Passionately teaching and mentoring advanced mathematics for various classes since 2019, helping students develop strong analytical and problem-solving skills. 🏆📖
+                                </p>
+
+                               
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/resources/img/favicon.ico" alt="" />
+                                <h3> Student of the year 2021 🎓✨ </h3>
+                                
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Honored as Student of the Year for achieving top academic scores and excelling as an all-rounder in academics, extracurricular activities, and leadership. 
+                                </p>
+
+                                
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="/resources/img/favicon.ico" alt="" />
+                                <h3> 🎨✍️ Excellence in Co-Curricular Activities 🏆✨ </h3>
+                                
+                                <p>
+                                    <span>&ldquo;</span>
+                                    🏅 30+ Awards in various co-curricular activities, including:
+                                    🖌️ Painting 
+                                    📝 National Essay Competitions
+                                    📖 Creative Writing , district level science manaka award, poem recitation, dance.
+                                </p>
+
+                                <a href="certificate-link-1.pdf" class="view-btn" target="_blank">View Certificate</a>
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer6">
+                <div class="contact_us">
+                    <div id="map"></div>
+                    <address class="info_container">
+                        <div class="info info1">
+                            <i class="fas fa-phone-alt"></i>
+                            <span class="iname">Phone</span>
+                            <a href="tel:+8800000000000">+91 7777777777</a>
+                        
+                        </div>
+                        <div class="info info2">
+                            <i class="fas fa-home"></i>
+                            <span class="iname">Address</span>
+                            <a
+                                href="https://www.google.com/maps/place/Bomikhal,+Jharapada,+Bhubaneswar,+Odisha/@20.285345,85.8579835,227m/data=!3m1!1e3!4m6!3m5!1s0x3a190a075fceec6b:0xd06d532a5ba63b32!8m2!3d20.2858015!4d85.8568907!16s%2Fg%2F1trcdvjf!5m2!1e4!1e1?entry=ttu&g_ep=EgoyMDI1MDIxOC4wIKXMDSoASAFQAw%3D%3D">
+                                <h3>Bhubaneswar, Odisha</h3>
+                                <span>India</span>
+                            </a>
+                        </div>
+                        <div class="info info3">
+                            <i class="fas fa-envelope"></i>
+                            <span class="iname">Email:</span>
+                            <a href="mailto:sasmita2004mama@gmail.com">sasmama@gmail.com</a>
+                        </div>
+                        
+                    </address>
+
+                    <form action="#" method="post">
+                        <h1>Get In Touch</h1>
+                        <div class="inp_field">
+                            <i class="fas fa-user"></i>
+                            <input
+                                type="text"
+                                name="name"
+                                class="fname"
+                                id="fname"
+                                placeholder="Full Name"
+                                required />
+                        </div>
+                        <div class="inp_field">
+                            <i class="fas fa-envelope"></i>
+                            <input
+                                type="email"
+                                name="email"
+                                class="email"
+                                id="email"
+                                placeholder="Email"
+                                required />
+                        </div>
+                        <div class="inp_field">
+                            <i class="fas fa-angle-double-right"></i>
+                            <input
+                                type="text"
+                                name="subject"
+                                class="subject"
+                                id="subject"
+                                placeholder="Subject"
+                                required />
+                        </div>
+                        <textarea
+                            name="message"
+                            cols="30"
+                            rows="5"
+                            class="message"
+                            id="message"
+                            placeholder="Message"
+                            required></textarea>
+                        <button class="submit" id="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <!-----------------JQUERY {https://jquery.com/} [USED IN portfolio.js]----------------->
+        <script src="/resources/js/jquery.min.js"></script>
+        <!-----------------MIX IT UP {https://www.kunkalabs.com/mixitup/} [USED IN portfolio.js]----------------->
+        <script src="/resources/js/mixitup.min.js"></script>
+        <!-----------------SWIPER JS {https://swiperjs.com/} [USED IN portfolio.js, comments.js]----------------->
+        <script src="/resources/swiper-js/swiper-bundle.min.js"></script>
+        <!-----------------MAPBOX GL {https://www.mapbox.com/} [USED IN contact.js]----------------->
+        <script src="/resources/mapbox-gl/mapbox-gl.js"></script>
+        <!-----------------EMAIL JS {https://www.emailjs.com/} [USED IN contact.js]----------------->
+        <script src="/resources/js/email.min.js"></script>
+        <!-----------------ADDITIONAL SCRIPT FOR EMAIL JS----------------->
+        <!-----------------VANILLA TILT JS {https://micku7zu.github.io/vanilla-tilt.js/}----------------->
+        <script src="/resources/js/vanilla-tilt.min.js"></script>
+        <!-----------------ANIME JS {https://animejs.com/} [USED LOCALLY.]----------------->
+        <script src="/resources/js/anime.min.js"></script>
+        <!-----------------LOCAL (HOME)----------------->
+        <script src="/resources/js/home.js"></script>
+        <!-----------------LOCAL (ABOUT)----------------->
+        <script src="/resources/js/about.js"></script>
+        <!-----------------LOCAL (SERVICES)----------------->
+        <script src="/resources/js/services.js"></script>
+        <!-----------------LOCAL (PORTFOLIO)----------------->
+        <script src="/resources/js/portfolio.js"></script>
+        <!-----------------LOCAL (COMMENTS)----------------->
+        <script src="/resources/js/comments.js"></script>
+        <!-----------------LOCAL (MAIN FILE)----------------->
+        <script src="/resources/js/main.js"></script>
+
+        <!-----------------CONTACT LOGIC-------------------------->
+        <script type="module">
+            // The 'building' layer in the mapbox-streets vector source contains building-height
+            // data from OpenStreetMap.
+            // For more, goto:
+            // https://www.mapbox.com/install/
+
+            mapboxgl.accessToken =
+                import.meta.env.VITE_MAPBOX_ACCESS_TOKEN || "";
+            var map = new mapboxgl.Map({
+                style: "mapbox://styles/mapbox/light-v10",
+                center: [90.3911645, 23.7494284], // Longitude, latitude
+                zoom: 18.5, // Zoom level
+                pitch: 45,
+                bearing: -17.6,
+                container: "map", // Our #map target.
+                antialias: true,
+            });
+
+            map.on("load", function () {
+                // Insert the layer beneath any symbol layer.
+                var layers = map.getStyle().layers;
+
+                var labelLayerId;
+                for (var i = 0; i < layers.length; i++) {
+                    if (
+                        layers[i].type === "symbol" &&
+                        layers[i].layout["text-field"]
+                    ) {
+                        labelLayerId = layers[i].id;
+                        break;
+                    }
+                }
+
+                map.addLayer(
+                    {
+                        id: "3d-buildings",
+                        source: "composite",
+                        "source-layer": "building",
+                        filter: ["==", "extrude", "true"],
+                        type: "fill-extrusion",
+                        minzoom: 15,
+                        paint: {
+                            "fill-extrusion-color": "#aaa",
+
+                            // use an 'interpolate' expression to add a smooth transition effect to the
+                            // buildings as the user zooms in
+                            "fill-extrusion-height": [
+                                "interpolate",
+                                ["linear"],
+                                ["zoom"],
+                                15,
+                                0,
+                                15.05,
+                                ["get", "height"],
+                            ],
+                            "fill-extrusion-base": [
+                                "interpolate",
+                                ["linear"],
+                                ["zoom"],
+                                15,
+                                0,
+                                15.05,
+                                ["get", "min_height"],
+                            ],
+                            "fill-extrusion-opacity": 0.6,
+                        },
+                    },
+                    labelLayerId
+                );
+            });
+            function vanillaTilt(element) {
+                VanillaTilt.init(document.querySelector(element), {
+                    max: 10,
+                    speed: 200,
+                    glare: true,
+                    "max-glare": 0.5,
+                });
+            }
+
+            vanillaTilt(".info1");
+            vanillaTilt(".info2");
+            vanillaTilt(".info3");
+
+            document.querySelector("form").addEventListener("submit", (e) => {
+                e.preventDefault();
+            });
+            let form_name = document.getElementById("fname");
+            let email = document.getElementById("email");
+            let subject = document.getElementById("subject");
+            let message = document.getElementById("message");
+            let submit = document.getElementById("submit");
+
+            submit.addEventListener("click", () => {
+                if (
+                    form_name.value == "" &&
+                    email.value == "" &&
+                    subject.value == "" &&
+                    message.value == ""
+                ) {
+                    alert("All fields are required");
+                    return;
+                } else {
+                    submitEmail();
+                }
+            });
+
+            emailjs.init(import.meta.env.VITE_EMAILJS_ACCESS_TOKEN);
+
+            function submitEmail() {
+                let param = {
+                    method: "POST",
+                    from_name: form_name.value,
+                    from_email: email.value,
+                    to_name: "Shuvro!",
+                    subject: subject.value,
+                    message: message.value,
+                };
+
+                emailjs.send("service_name", "template_name", param).then(
+                    function (response) {
+                        alert(
+                            "SUCCESS! " + response.status + " " + response.text
+                        );
+                    },
+                    function (error) {
+                        alert("FAILED... " + error);
+                    }
+                );
+            }
+
+            document.querySelector("form").addEventListener("submit", (e) => {
+                e.preventDefault();
+            });
+        </script>
+
+        <!-----------------LOCAL (MAIN FILE { USED TO ANIMATE WEBPAGE.})----------------->
+        <script defer>
+            const animate1 = anime.timeline({
+                targets: ".circle",
+                loop: true,
+                duration: 2000,
+                direction: "alternate",
+                easing: "easeInOutQuad",
+            });
+            animate1.add({
+                translateX: 350,
+            });
+
+            let dot = document.querySelectorAll(".dot");
+            for (let i = 0; i < dot.length; i++) {
+                const ind = dot[i];
+                const animate2 = anime.timeline({
+                    targets: ind,
+                    loop: true,
+                    direction: "alternate",
+                    delay: i * 100,
+                });
+                animate2.add({
+                    scale: 2,
+                });
+            }
+
+            let span = document.querySelectorAll(".content .text span");
+
+            const animate3 = anime.timeline({
+                targets: span,
+                easing: "easeInOutExpo",
+                delay: anime.stagger(50), // Staggered delay for a typing effect
+                autoplay: true, // Ensures animation runs automatically
+            });
+            
+            animate3.add({
+                opacity: [0, 1],       // Smooth fade-in effect
+                translateY: [10, 0],   // Moves letters upward slightly
+                duration: 1000,
+            });
+            
+            // New Button Animation (Scale & Glow Effect)
+            const animate4 = anime({
+                targets: ".button",
+                scale: [0.8, 1],      // Slight pop effect
+                opacity: [0, 1],      // Fade-in effect
+                duration: 1000,
+                easing: "easeOutBounce", // Gives a smooth bouncing effect
+                delay: anime.stagger(300, { start: 2000 }),
+                autoplay: true, // Auto play when page loads
+            });
+            
+
+            const animate5 = anime({
+                targets: [
+                    document.querySelectorAll(".info"),
+                    document.querySelectorAll(".inp_field"),
+                    ".message",
+                    ".submit",
+                ],
+                translateY: [50, 0],
+                rotateX: [90, 0],
+                opacity: [0, 1],
+                delay: anime.stagger(300, { start: 1000 }),
+                duration: 750,
+                autoplay: false,
+                easing: "easeOutQuint",
+            });
+
+            const animate6 = anime({
+                targets: [".services .t_dummy", ".services .hero-text"],
+                duration: 1000,
+                scaleX: [0, 1],
+                delay: anime.stagger(300, { start: 1000 }),
+                autoplay: false,
+            });
+
+            function resize() {
+                if (window.innerWidth <= 632) {
+                    animate5.play();
+                    animate3.play();
+                    animate4.play();
+                    animate6.play();
+                }
+            }
+            resize();
+            window.addEventListener("resize", resize);
+        </script>
+    </body>
+</html>

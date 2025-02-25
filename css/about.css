@@ -1,0 +1,722 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Script&display=swap");
+
+:root {
+    --primary-bg: #0d1117;
+    --secondary-bg: #1c2635;
+    --accent-purple: #b105ca;
+    --accent-pink: #d0154e;
+    --accent-teal: #21d5ab67;
+    --accent-blue: #267ff4;
+    --accent-yellow: #f0ce35;
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --text-highlight: dodgerblue;
+    --text-danger: crimson;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: "Montserrat", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    background: var(--primary-bg);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.layer1 {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: var(--primary-bg);
+}
+
+.styling {
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.absolute {
+    position: absolute;
+    user-select: none;
+}
+
+/* Decorative elements */
+.box {
+    top: 95%;
+    left: 8%;
+    width: clamp(20px, 5vw, 30px);
+    height: clamp(20px, 5vw, 30px);
+    border: max(0.3vw, 3px) solid var(--accent-purple);
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    animation: rotate 5s linear 0s infinite forwards;
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.circle {
+    top: min(-50px, -5vh);
+    left: 30%;
+    border: clamp(5px, 1vw, 10px) solid var(--accent-pink);
+    width: clamp(50px, 10vw, 100px);
+    height: clamp(50px, 10vw, 100px);
+    border-radius: 50%;
+}
+
+.triangle {
+    top: 20%;
+    left: 20%;
+    transform: translate(-50%, -50%) rotate(190deg);
+    border-top: clamp(10px, 2vw, 20px) solid var(--accent-teal);
+    border-left: clamp(10px, 2vw, 20px) solid var(--accent-teal);
+    border-right: clamp(10px, 2vw, 20px) solid transparent;
+    border-bottom: clamp(10px, 2vw, 20px) solid transparent;
+    z-index: 1;
+    animation: up_down 5s ease-in-out 0s infinite forwards;
+}
+
+@keyframes up_down {
+    0%, 100% {
+        transform: translate(-50%, -50%) rotate(190deg);
+    }
+    50% {
+        transform: translate(-50%, 150%) rotate(190deg);
+    }
+}
+
+.triangle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-top: clamp(10px, 2vw, 20px) solid var(--accent-blue);
+    border-left: clamp(10px, 2vw, 20px) solid var(--accent-blue);
+    border-right: clamp(10px, 2vw, 20px) solid transparent;
+    border-bottom: clamp(10px, 2vw, 20px) solid transparent;
+    transform: translate(-90%, -30%);
+    z-index: -1;
+}
+
+.dots {
+    top: 18%;
+    left: 57%;
+    width: clamp(25px, 5vw, 50px);
+    height: clamp(50px, 10vw, 100px);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.dots .dot {
+    background: var(--accent-yellow);
+    width: clamp(2px, 0.3vw, 3px);
+    height: clamp(2px, 0.3vw, 3px);
+    border-radius: 50%;
+}
+
+.wave {
+    bottom: 0;
+    left: 0;
+    stroke-width: clamp(5px, 1vw, 10px);
+    stroke: var(--secondary-bg);
+    fill: transparent;
+    z-index: 0;
+    stroke-linecap: round;
+    stroke-dasharray: 3400px;
+    stroke-dashoffset: 3400px;
+    animation: dash 8s ease-in-out 0s 1 forwards;
+    width: 100%;
+    height: auto;
+}
+
+.wave.opposite {
+    top: 100%;
+    bottom: inherit;
+    transform: rotateX(180deg);
+}
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 6800px;
+    }
+    45% {
+        stroke-dashoffset: 3400px;
+    }
+    90% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+    }
+    100% {
+        fill: var(--secondary-bg);
+    }
+}
+
+/* Main content */
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    z-index: 100;
+    width: 100%;
+    padding: 1rem;
+}
+
+.wrapper .face {
+    position: relative;
+    height: 100vh;
+}
+
+.wrapper .face.face1 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 0 clamp(20px, 5vw, 75px);
+}
+
+.face.face1 h1 {
+    font-family: "Kaushan Script", cursive;
+    font-size: clamp(2.5rem, 4.5vw, 5rem);
+    margin-bottom: 1rem;
+}
+
+.face.face1 p {
+    font-family: "Kaushan Script";
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+}
+
+.wrapper .face.face2 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: min(100%, 900px);
+    height: min(100vh, 900px);
+    border-radius: 50%;
+    background: url("../img/sas2.png") no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.face.face1 h1 span,
+.face.face1 p span {
+    display: inline-block;
+}
+
+/* Buttons */
+.button {
+    position: relative;
+    display: inline-block;
+    margin: clamp(5px, 1vw, 10px) clamp(3px, 0.5vw, 5px);
+    padding: clamp(10px, 1.5vw, 15px) clamp(15px, 2vw, 20px);
+    font-size: clamp(1.2rem, 3vw, 2.2rem);
+    color: var(--text-primary);
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    outline: none;
+    width: clamp(120px, 35%, 300px);
+}
+
+.button.download,
+.button.hire {
+    background: url("../img/bt1.png") no-repeat 50% 50%;
+    background-size: 100% 300%;
+}
+
+/* Navigation */
+.about_nav {
+    position: relative;
+    width: 100%;
+    height: clamp(60px, 12vh, 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+
+.about_nav ul {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+.about_nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0.5rem;
+}
+
+.about_nav ul li a {
+    font-size: clamp(1rem, 2.5vw, 1.6rem);
+    padding: clamp(8px, 1.5vw, 15px) clamp(15px, 3vw, 30px);
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    transition: 0.3s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    color: var(--text-primary);
+}
+
+.about_nav ul li a:hover {
+    color: var(--text-highlight);
+}
+
+.about_nav ul li a.active {
+    color: var(--text-highlight);
+    box-shadow: inset 5px 5px 10px black, inset -3px -3px 5px rgba(255, 255, 255, 0.15);
+}
+
+/* About container */
+.about_container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    min-height: 50vh;
+    width: calc(100vw * 3);
+    margin-left: 0;
+    transition: 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    overflow-x: hidden;
+}
+
+.about_container > div {
+    width: 100vw;
+    padding: 1rem;
+}
+
+.about_container.one {
+    margin-left: 0;
+}
+
+.about_container.two {
+    margin-left: -100vw;
+}
+
+.about_container.three {
+    margin-left: -200vw;
+}
+
+/* Skills section - FIXED */
+/* .skills {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
+} */
+
+.skills {
+    grid-template-columns: 1fr;  /* Force single column layout */
+    max-width: auto;  /* Optional: limit width to approximate phone width */
+    margin: 0 auto;    /* Optional: center the skills container */
+  }
+
+.skills .skill {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-bg);
+    padding: 2rem 1.5rem 1.5rem;
+    border-radius: 10px;
+    height: auto;
+    min-height: 100px;
+    margin: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: 0.25s ease-in-out;
+}
+
+.skill .name {
+    position: relative;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.skill .value {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--accent-yellow);
+}
+
+.skill .percent {
+    position: relative;
+    width: 100%;
+    height: 12px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: auto;
+}
+
+.skill .percent .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-teal));
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+/* Experience & Education sections */
+.education, 
+.experience {
+    position: relative;
+    width: 100%;
+    min-height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: clamp(30px, 10vw, 100px);
+    padding: 2rem 1rem;
+}
+
+.middle_line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 5px;
+    height: 100%;
+    background: #333;
+    border-radius: 5px;
+}
+
+.cover:nth-child(even) {
+    justify-self: end;
+}
+
+.cover:nth-child(odd) {
+    justify-self: start;
+}
+
+.cover {
+    position: relative;
+    width: clamp(200px, 70%, 400px);
+    height: auto;
+    min-height: 250px;
+    color: var(--text-secondary);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: inset 5px 5px 10px black, inset -3px -3px 5px rgba(255, 255, 255, 0.15);
+}
+
+.cover::before {
+    content: "";
+    position: absolute;
+    top: 20%;
+    right: -15px;
+    transform: rotate(135deg);
+    border-left: 15px solid rgba(255, 255, 255, 0.3);
+    border-top: 15px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid transparent;
+}
+
+.cover:nth-child(odd)::before {
+    left: -15px;
+    right: inherit;
+    transform: rotate(-45deg);
+}
+
+.cover .job_box {
+    position: absolute;
+    top: 18%;
+    right: -75px;
+    font-size: clamp(1.5rem, 3vw, 1.9rem);
+    border-radius: 50%;
+    background: var(--accent-blue);
+    width: clamp(30px, 5vw, 50px);
+    height: clamp(30px, 5vw, 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover:nth-child(odd) .job_box {
+    top: 20%;
+    left: -75px;
+    right: inherit;
+}
+
+.cover:last-child {
+    margin-bottom: clamp(50px, 10vh, 100px);
+}
+
+.cover:nth-child(even) {
+    text-align: right;
+}
+
+.date {
+    color: var(--text-danger);
+    font-weight: bold;
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+}
+
+.name_company {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: bolder;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+
+.text_hidden {
+    width: 100%;
+    height: auto;
+    max-height: 100px;
+    overflow: auto;
+    font-family: "roboto", sans-serif;
+    font-size: clamp(0.9rem, 1.5vw, 1.25rem);
+    font-weight: 400;
+    color: hsl(0, 5%, 96%);
+    line-height: 1.6;
+    text-align: justify;
+    padding: 10px;
+}
+
+.text_hidden::-webkit-scrollbar {
+    width: 5px;
+}
+
+.text_hidden::-webkit-scrollbar-thumb {
+    background: var(--accent-blue);
+    border-radius: 5px;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .wrapper {
+        flex-direction: column;
+    }
+    
+    .wrapper .face.face1,
+    .wrapper .face.face2 {
+        width: 100%;
+        height: auto;
+        min-height: 50vh;
+    }
+    
+    .button {
+        display: block;
+        margin: 0.5rem auto;
+        width: 80%;
+        max-width: 300px;
+    }
+    
+    .skills {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .skills {
+        grid-template-columns: 1fr;
+    }
+    
+    .experience,
+    .education {
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+    }
+    
+    .middle_line {
+        left: 28px;
+    }
+    
+    .cover {
+        width: 80%;
+        margin-left: 50px;
+    }
+    
+    .cover:nth-child(even),
+    .cover:nth-child(odd) {
+        justify-self: start;
+        text-align: left;
+    }
+    
+    .cover:nth-child(even) .job_box,
+    .cover:nth-child(odd) .job_box {
+        left: -40px;
+        right: auto;
+    }
+    
+    .cover::before {
+        left: -15px;
+        right: auto;
+        transform: rotate(-45deg);
+    }
+    
+    .about_container {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    
+    .about_container > div {
+        width: 100vw;
+    }
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 14px;
+    }
+    
+    .wrapper .face.face2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0.3;
+    }
+    
+    .wrapper .face.face1 {
+        padding: 1rem;
+        text-align: center;
+        z-index: 2;
+    }
+    
+    .cover {
+        width: 85%;
+        margin-left: 40px;
+    }
+    
+    .skills .skill {
+        padding: 1.5rem 1rem 1rem;
+    }
+}
+
+@media (max-width: 366px) {
+    html {
+        font-size: 12px;
+    }
+    
+    .cover::before {
+        display: none;
+    }
+    
+    .cover {
+        width: 90%;
+        margin-left: 30px;
+    }
+    
+    .cover .job_box {
+        width: 30px;
+        height: 30px;
+        left: -35px;
+        font-size: 1.2rem;
+    }
+    
+    .middle_line {
+        left: 15px;
+    }
+    
+    .skills .skill {
+        margin: 0.25rem;
+    }
+    
+    .skill .name {
+        font-size: 0.9rem;
+    }
+    
+    .skill .value {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 290px) {
+    .wrapper .face.face1 {
+        padding: 0.5rem;
+    }
+    
+    .face.face1 p {
+        font-family: "League Script", cursive;
+        font-size: clamp(1rem, 7vw, 1.4rem);
+        text-align: center;
+    }
+    
+    .about_nav ul li a {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+}
+
+/* For high-resolution screens */
+@media (min-width: 1920px) {
+    html {
+        font-size: 18px;
+    }
+    
+    .wrapper {
+        max-width: 1800px;
+        margin: 0 auto;
+    }
+}
+
+/* For ultra-wide screens */
+@media (min-width: 2560px) {
+    html {
+        font-size: 20px;
+    }
+    
+    .wrapper {
+        max-width: 2200px;
+        margin: 0 auto;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-primary: #ffffff;
+        --text-secondary: #cccccc;
+    }
+}
+
+/* Ensure all SVG and canvas elements scale properly */
+svg, canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Prevent content overflow */
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Add CSS to ensure the container doesn't overflow horizontally */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
