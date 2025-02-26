@@ -9,11 +9,9 @@ Welcome to my **personal portfolio website**! 🚀 This is a showcase of my **pr
 - **Achievements & Certifications** – Displays awards, certificates, and academic milestones.  
 - **AI Chatbot Integration** – Engaging and interactive chatbot for quick interactions.  
 
----
   
 👉 [Visit My Portfolio](https://vocal-kheer-225596.netlify.app/#)  
 
----
 
 ## Tech Stack  
  
@@ -28,6 +26,7 @@ Welcome to my **personal portfolio website**! 🚀 This is a showcase of my **pr
 ![Screen Shot 2025-02-26 at 09 00 50](https://github.com/user-attachments/assets/54965ced-e38c-4422-98ae-e69eea4617d4)
 
 📌 **Chatbot** - For Quick Interaction
+
 ![Screen Shot 2025-02-26 at 09 05 07](https://github.com/user-attachments/assets/316586b6-be66-46b6-974b-9770f1d447dd)
 
 
@@ -53,6 +52,7 @@ Welcome to my **personal portfolio website**! 🚀 This is a showcase of my **pr
 
 
 📌 **Contact** – Ways to Get in touch
+
 ![Screen Shot 2025-02-26 at 09 10 44](https://github.com/user-attachments/assets/d92d51ae-df1e-42d9-9e56-e36ec0f23e06)
 
 
